@@ -17,14 +17,15 @@ public class Smile {
 
 
         System.out.println(countSmileys(a));
+
     }
 
     public static int countSmileys(List<String> arr) {
         // Just Smile :)
         int counter = 0;
         for (String s : arr) {
-            if (s.equals(":)") || s.equals(":D") || s.equals(";-D") || s.equals(":~)")) {
-                counter++;
+            if (s.endsWith(")") || s.endsWith(":D") || s.endsWith("-D") || s.endsWith("~D") || s.endsWith("~)")) {
+                ++counter;
             }
         }
         return counter;
